@@ -1,0 +1,59 @@
+﻿@page
+@model CapenexisLearners.Pages.Level5Learner.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Level5Learners</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Level5Learners.SurName" class="control-label"></label>
+                <input asp-for="Level5Learners.SurName" class="form-control" />
+                <span asp-validation-for="Level5Learners.SurName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level5Learners.FirstName" class="control-label"></label>
+                <input asp-for="Level5Learners.FirstName" class="form-control" />
+                <span asp-validation-for="Level5Learners.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level5Learners.NationalIdentityNumber" class="control-label"></label>
+                <input asp-for="Level5Learners.NationalIdentityNumber" class="form-control" />
+                <span asp-validation-for="Level5Learners.NationalIdentityNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level5Learners.Course" class="control-label"></label>
+                <input asp-for="Level5Learners.Course" class="form-control" />
+                <span asp-validation-for="Level5Learners.Course" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level5Learners.Price" class="control-label"></label>
+                <input asp-for="Level5Learners.Price" class="form-control" />
+                <span asp-validation-for="Level5Learners.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level5Learners.Duration" class="control-label"></label>
+                <input asp-for="Level5Learners.Duration" class="form-control" />
+                <span asp-validation-for="Level5Learners.Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
